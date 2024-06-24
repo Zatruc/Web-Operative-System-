@@ -1,0 +1,22 @@
+---
+import IconApp from './IconApp.astro';
+import StartButton from './StartButton.astro';
+---
+
+<div class="bg-gray-900 flex items-center h-14 px-4">
+    <div class="flex-grow"></div>
+    <div class="flex h-12 items-center space-x-3  bg-gray-700 rounded-md px-2.5 py-1">
+        <IconApp src="../../public/icons/AppStore.svg" />
+        <IconApp src="../../public/icons/Calculator.svg" />
+        <IconApp src="../../public/icons/VScode.svg" />
+    </div>
+    <div class="flex-shrink-0">
+        <StartButton />
+    </div>
+    <div class="flex h-12 items-center space-x-3  bg-gray-700 rounded-md px-2.5 py-1">
+        <IconApp src="../../public/icons/Folder.svg" /> 
+        <IconApp src="../../public/icons/Excel.svg" /> 
+        <IconApp src="../../public/icons/Spotify.svg" url="https://www.spotify.com/" />
+    </div>
+    <div class="flex-grow"></div>
+</div>

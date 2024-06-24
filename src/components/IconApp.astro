@@ -1,0 +1,9 @@
+---
+const { src, url } = Astro.props;
+---
+
+<div class="container my-1 hover:bg-gray-800 p-2 rounded-md">
+    <button type="button" class="box-border flex items-center justify-center" data-url={url} onclick="loadPage(event)">
+        <img src={src} class="bg-contain h-7 w-7 hover:scale-125" />
+    </button>
+</div>

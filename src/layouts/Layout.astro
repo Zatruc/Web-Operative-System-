@@ -1,0 +1,33 @@
+---
+import Taskbar from '../components/Taskbar.jsx';
+import Notifications from '../components/Notifications.jsx';
+import StartButton from '../components/StartButton';
+
+const handleStartMenuClick = () => {
+	console.log("Inicio button clicked!");
+};
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{Astro.props.title || "Desktop"}</title>
+	</head>
+		<body class="bg-blue-200 box relative min-h-screen pb-16">
+			
+			<!-- Area de notificaciones flotante -->
+			<div class="absolute top-0 right-0 m-4">
+				<Notifications client:load />
+			</div>
+			<div class="bg-blue-400 opacity-40 border-2 border-black absolute bottom-0 w-full h-14">
+				<slot name="StartButton">
+				<Taskbar slot="Taskbar" client:load onStartMenuClick={handleStartMenuClick} />
+<StartButton onClick={() => console.log("Start button clicked!")} slot="StartButton">
+			</div>
+		</body>
+</html>

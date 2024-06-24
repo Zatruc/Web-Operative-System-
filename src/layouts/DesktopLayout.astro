@@ -1,0 +1,25 @@
+---
+import Taskbar from '../components/Taskbar.astro';
+import Notifications from '../components/Notifications.astro';
+---
+
+<html>
+    <head>
+        <title>SO</title>
+        
+    </head>
+    <body class="bg-gray-800 text-white">
+        <!-- Contenedor principal del escritorio -->
+        <div id="root" class="flex flex-col h-screen">
+            <!-- Área de trabajo -->
+            <div class="flex-grow flex h-full w-full">
+                <!-- Aquí se renderiza el contenido de la página -->
+                <slot />
+            </div>
+                <!-- Barra de Tareas -->
+                <Taskbar />
+        </div>
+        <!-- Notificaciones -->
+        <Notifications />
+    </body>
+</html>
